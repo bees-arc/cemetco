@@ -199,6 +199,18 @@ export default function ProjectsMap() {
 
       leafletMap.current = map;
 
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 250);
+
+      // ResizeObserver to automatically adjust map canvas height
+      const resizeObserver = new ResizeObserver(() => {
+        map.invalidateSize();
+      });
+      if (mapRef.current) {
+        resizeObserver.observe(mapRef.current);
+      }
+
       // Add OpenStreetMap Voyager light tile layer
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
         attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
