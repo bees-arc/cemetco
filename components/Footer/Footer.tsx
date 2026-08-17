@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
+import { IconPin, IconPhone, IconMail } from "@/components/Icons";
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -23,17 +24,19 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      {/* CTA Strip */}
-      <div className={styles.ctaStrip}>
+      {/* Floating CTA Banner Overlap at Top of Footer */}
+      <div className={styles.ctaWrapper}>
         <div className="container">
-          <div className={styles.ctaInner}>
-            <div className={styles.ctaText}>
-              <h2>Ready to Build Your Dream Structure?</h2>
-              <p>Get a free consultation and quote from our expert engineers today.</p>
+          <div className={styles.ctaStrip}>
+            <div className={styles.ctaInner}>
+              <div className={styles.ctaText}>
+                <h2>Ready to Build Your Dream Structure?</h2>
+                <p>Get a free consultation and quote from our expert engineers today.</p>
+              </div>
+              <Link href="/contact" className={styles.ctaBtn}>
+                Get a Free Quote →
+              </Link>
             </div>
-            <Link href="/contact" className={styles.ctaBtn}>
-              Get a Free Quote →
-            </Link>
           </div>
         </div>
       </div>
@@ -116,7 +119,9 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Contact Us</h4>
             <div className={styles.contactItems}>
               <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>📍</div>
+                <div className={styles.contactIconWrap}>
+                  <IconPin size={16} color="var(--color-primary)" />
+                </div>
                 <div className={styles.contactText}>
                   <span className={styles.contactLabel}>Address</span>
                   <span className={styles.contactValue}>
@@ -126,7 +131,9 @@ export default function Footer() {
                 </div>
               </div>
               <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>📞</div>
+                <div className={styles.contactIconWrap}>
+                  <IconPhone size={16} color="var(--color-primary)" />
+                </div>
                 <div className={styles.contactText}>
                   <span className={styles.contactLabel}>Phone</span>
                   <span className={styles.contactValue}>
@@ -135,7 +142,9 @@ export default function Footer() {
                 </div>
               </div>
               <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>✉</div>
+                <div className={styles.contactIconWrap}>
+                  <IconMail size={16} color="var(--color-primary)" />
+                </div>
                 <div className={styles.contactText}>
                   <span className={styles.contactLabel}>Email</span>
                   <span className={styles.contactValue}>
