@@ -273,27 +273,39 @@
 
 @media (max-width: 768px) {
   .ctaWrapper {
-    top: -40px;
-    margin-bottom: -20px;
+    top: -30px;
+    margin-bottom: 0;
   }
 
   .ctaStrip {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .ctaText h2 {
+    font-size: 1.25rem;
+  }
+
+  .ctaText p {
+    font-size: 0.875rem;
   }
 
   .ctaInner {
     flex-direction: column;
     text-align: center;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .ctaBtn {
     width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.8125rem;
   }
 
   .footerTop {
     grid-template-columns: 1fr;
-    gap: var(--spacing-8);
+    gap: var(--spacing-6);
+    padding-top: 1.5rem;
   }
 
   .footerBottom {
