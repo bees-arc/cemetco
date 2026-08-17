@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" width="400" height="130">
+  <!-- Red Roof Outline -->
+  <path d="M 30 55 L 200 10 L 370 55" fill="none" stroke="#C8102E" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 25 60 L 200 12 L 375 60" fill="none" stroke="#1A3C6E" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- CEMETCO Text -->
+  <text x="200" y="95" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="52" fill="#1A3C6E" text-anchor="middle" letter-spacing="2">
+    CEMETCO
+  </text>
+
+  <!-- Tagline Text -->
+  <text x="200" y="120" font-family="'Brush Script MT', cursive, 'Inter', sans-serif" font-weight="bold" font-style="italic" font-size="20" fill="#0D1117" text-anchor="middle">
+    The Construction Excellence
+  </text>
+</svg>
