@@ -225,10 +225,6 @@ export default function HomePage() {
         </div>
 
         <div className={`container ${styles.heroContent}`}>
-          <div className={`${styles.heroBadge} fade-up`}>
-            <IconDrafting size={16} color="var(--color-primary)" />
-            <span>Sri Lanka&apos;s Premier Steel Building Experts</span>
-          </div>
           <h1 className={`${styles.heroTitle} fade-up delay-1`}>
             Building Excellence<br />
             <span className={styles.heroHighlight}>in Steel</span>
