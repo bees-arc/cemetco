@@ -21,7 +21,7 @@ const buildings = [
     desc: "Spacious, cost-effective warehouse solutions built to maximize your storage and operational needs.",
     icon: IconWarehouse,
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
-    color: "#1A3C6E",
+    color: "#0D1117",
   },
   {
     slug: "factories",
@@ -45,7 +45,7 @@ const buildings = [
     desc: "Precision-engineered aircraft hangar structures meeting CAASL and international aviation standards.",
     icon: IconHangar,
     img: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&q=80",
-    color: "#1A3C6E",
+    color: "#0D1117",
   },
   {
     slug: "factory-renovations",
@@ -86,7 +86,7 @@ export default function SteelBuildingsPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+          <div className="grid-3">
             {buildings.map((b) => {
               const IconComp = b.icon;
               return (

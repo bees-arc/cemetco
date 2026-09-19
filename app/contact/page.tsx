@@ -57,7 +57,7 @@ export default function ContactPage() {
 
       <section className="section">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "4rem", alignItems: "start" }}>
+          <div className="grid-sidebar">
             {/* Contact Info */}
             <div>
               <span className="section-label">Contact Information</span>
@@ -180,10 +180,10 @@ export default function ContactPage() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
+                  className="card-responsive"
                   style={{
                     background: "var(--color-white)",
                     borderRadius: "16px",
-                    padding: "2.5rem",
                     boxShadow: "var(--shadow-xl)",
                     border: "1px solid var(--color-gray-100)",
                   }}
@@ -195,7 +195,7 @@ export default function ContactPage() {
                     Fill in the form below and we&apos;ll get back to you within 24 hours.
                   </p>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+                  <div className="grid-form">
                     <FormGroup label="Full Name *" id="name">
                       <input
                         id="name"

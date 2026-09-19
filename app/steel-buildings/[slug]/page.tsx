@@ -215,7 +215,7 @@ export default async function SteelBuildingPage({ params }: { params: Promise<{ 
       {/* Main Content */}
       <section className="section">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "4rem", alignItems: "start" }}>
+          <div className="grid-sidebar-rev">
             {/* Text */}
             <div>
               <span className="section-label">{page.category}</span>

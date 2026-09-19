@@ -90,7 +90,7 @@ export default function AboutPage() {
       {/* ── INTRO ── */}
       <section className="section">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+          <div className="grid-sidebar-rev" style={{ alignItems: "center" }}>
             <div>
               <span className="section-label">Our Story</span>
               <h2 className="section-title">Building Sri Lanka&apos;s Industrial Future</h2>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 consumption while delivering maximum structural performance.
               </p>
             </div>
-            <div style={{ position: "relative", height: "480px" }}>
+            <div style={{ position: "relative", minHeight: "320px", height: "100%", borderRadius: "12px", overflow: "hidden" }}>
               <img
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
                 alt="Cemetco construction site"
@@ -148,8 +148,8 @@ export default function AboutPage() {
               </div>
             </div>
             <div style={cardStyle}>
-              <div style={iconWrap("#1A3C6E")}>
-                <IconDrafting size={28} color="#1A3C6E" />
+              <div style={iconWrap("#0D1117")}>
+                <IconDrafting size={28} color="#0D1117" />
               </div>
               <h3 style={{ marginBottom: "1rem" }}>Our Vision</h3>
               <div className="check-list">
@@ -183,8 +183,8 @@ export default function AboutPage() {
               return (
                 <div key={v.title} style={{ ...cardStyle, textAlign: "center" }}>
                   <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
-                    <div style={iconWrap("#1A3C6E")}>
-                      <IconComp size={28} color="#1A3C6E" />
+                    <div style={iconWrap("#0D1117")}>
+                      <IconComp size={28} color="#0D1117" />
                     </div>
                   </div>
                   <h4 style={{ marginBottom: "0.75rem", color: "var(--color-gray-900)" }}>{v.title}</h4>

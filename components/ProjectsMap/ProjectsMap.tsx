@@ -249,7 +249,7 @@ export default function ProjectsMap() {
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
-                background: ${project.category === "Warehouse" ? "#1A3C6E" : "#C8102E"};
+                background: ${project.category === "Warehouse" ? "#0D1117" : "#C8102E"};
                 border: 3px solid #ffffff;
                 box-shadow: 0 4px 14px rgba(200, 16, 46, 0.4);
                 display: flex;

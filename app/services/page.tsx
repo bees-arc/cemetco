@@ -99,7 +99,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.5rem" }}>
+          <div className="grid-2">
             {services.map((service, i) => {
               const IconComp = service.icon;
               const color = i % 2 === 0 ? "var(--color-primary)" : "var(--color-accent)";
@@ -120,7 +120,7 @@ export default function ServicesPage() {
                   <div style={{
                     width: "60px", height: "60px", flexShrink: 0,
                     borderRadius: "12px",
-                    background: i % 2 === 0 ? "rgba(200,16,46,0.1)" : "rgba(26,60,110,0.1)",
+                    background: i % 2 === 0 ? "rgba(200,16,46,0.1)" : "rgba(13,17,23,0.1)",
                     display: "flex", alignItems: "center", justifyContent: "center",
                   }}>
                     <IconComp size={28} color={color} />
@@ -161,7 +161,7 @@ export default function ServicesPage() {
             <span className="section-label">How We Work</span>
             <h2 className="section-title">Our Service Delivery Process</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.5rem" }}>
+          <div className="grid-4">
             {["Initial Consultation", "Design & Engineering", "Fabrication", "Erection & Handover"].map((step, i) => (
               <div key={step} style={{ textAlign: "center", padding: "2rem 1rem" }}>
                 <div style={{

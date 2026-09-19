@@ -28,7 +28,7 @@
   background: linear-gradient(
     135deg,
     rgba(13, 17, 23, 0.82) 0%,
-    rgba(26, 60, 110, 0.65) 50%,
+    rgba(9, 13, 19, 0.72) 50%,
     rgba(13, 17, 23, 0.6) 100%
   );
   z-index: 1;
@@ -804,7 +804,11 @@
 
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem 1rem;
+  }
+
+  .statItem:nth-child(2n)::after {
+    display: none;
   }
 
   .servicesGrid {

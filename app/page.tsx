@@ -135,7 +135,7 @@ const services = [
     title: "Warehouses",
     desc: "Spacious, cost-effective warehouse solutions built to maximize your storage and operational needs.",
     href: "/steel-buildings/warehouses",
-    color: "#1A3C6E",
+    color: "#0D1117",
   },
   {
     icon: IconVehicle,
@@ -149,7 +149,7 @@ const services = [
     title: "Aircraft Hangars",
     desc: "Precision-engineered aircraft hangar structures meeting international aviation standards.",
     href: "/steel-buildings/aircraft-hangars",
-    color: "#1A3C6E",
+    color: "#0D1117",
   },
   {
     icon: IconRenovation,
@@ -163,7 +163,7 @@ const services = [
     title: "Engineering Services",
     desc: "Comprehensive structural design, fabrication, and erection services using Staad Pro & Prokon.",
     href: "/services",
-    color: "#1A3C6E",
+    color: "#0D1117",
   },
 ];
 

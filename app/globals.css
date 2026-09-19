@@ -7,9 +7,9 @@
   --color-primary: #C8102E;
   --color-primary-dark: #a00d25;
   --color-primary-light: #e8193d;
-  --color-accent: #1A3C6E;
-  --color-accent-dark: #122b52;
-  --color-accent-light: #2a5298;
+  --color-accent: #0D1117;
+  --color-accent-dark: #000000;
+  --color-accent-light: #1F2937;
 
   --color-white: #ffffff;
   --color-off-white: #F7F8FA;
@@ -62,7 +62,7 @@
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.08);
   --shadow-xl: 0 20px 50px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.10);
   --shadow-primary: 0 8px 25px rgba(200,16,46,0.3);
-  --shadow-accent: 0 8px 25px rgba(26,60,110,0.25);
+  --shadow-accent: 0 8px 25px rgba(13,17,23,0.3);
 
   --transition-fast: 0.15s ease;
   --transition-normal: 0.25s ease;
@@ -217,9 +217,157 @@ button {
   line-height: var(--line-height-relaxed);
 }
 
+/* ============================================
+   PAGE HERO & BREADCRUMB
+   ============================================ */
+.page-hero {
+  background: linear-gradient(135deg, #090d13 0%, #161c24 50%, #0d1117 100%);
+  color: var(--color-white);
+  padding-top: calc(var(--nav-height) + 2.5rem);
+  padding-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(200, 16, 46, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: var(--font-weight-black);
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.page-hero p {
+  font-size: clamp(0.9375rem, 2vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 650px;
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-white);
+}
+
+.breadcrumb span:last-child {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE GRIDS & UTILITIES
+   ============================================ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-6);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-6);
+}
+
+.grid-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-16);
+  align-items: start;
+}
+
+.grid-sidebar-rev {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--spacing-16);
+  align-items: start;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.card-responsive {
+  padding: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-5);
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-5);
+  }
+  .grid-sidebar,
+  .grid-sidebar-rev {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+}
+
 @media (max-width: 768px) {
+  .page-hero {
+    padding-top: calc(var(--nav-height) + 1.25rem);
+    padding-bottom: 2.25rem;
+  }
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  .grid-sidebar,
+  .grid-sidebar-rev {
+    gap: var(--spacing-6);
+  }
+  .card-responsive {
+    padding: 1.25rem;
+  }
   .section-subtitle {
     font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-4,
+  .grid-form {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
   }
 }
 
@@ -283,7 +431,7 @@ button {
 .btn-accent:hover {
   background-color: var(--color-accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(26, 60, 110, 0.35);
+  box-shadow: 0 12px 30px rgba(13, 17, 23, 0.35);
 }
 
 .btn-outline {
