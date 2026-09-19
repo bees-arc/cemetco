@@ -214,13 +214,17 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
-          <Image
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85"
-            alt="Steel construction building"
-            fill
-            priority
-            style={{ objectFit: "cover" }}
-          />
+          <video
+            className={styles.heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster="/photo-1504307651254-35680f356dfd.webp"
+          >
+            <source src="/Animate_website_hero_video_loop_20260919142010.mp4" type="video/mp4" />
+          </video>
           <div className={styles.heroOverlay} />
         </div>
 
