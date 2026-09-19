@@ -211,9 +211,9 @@ export default function ProjectsMap() {
         resizeObserver.observe(mapRef.current);
       }
 
-      // Add OpenStreetMap Voyager light tile layer
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+      // Add clean Esri World Street Map layer (no watermark, no API key required)
+      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
+        attribution: '&copy; <a href="https://www.esri.com/">Esri</a>',
         maxZoom: 18,
       }).addTo(map);
 

@@ -49,6 +49,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -72,11 +73,19 @@ export default function Navbar() {
         <div className={styles.navInner}>
           <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
             <Image
-              src="/logo.svg"
+              src="/logo-white.png"
               alt="Cemetco Engineering"
               width={160}
-              height={52}
-              className={styles.logoImg}
+              height={74}
+              className={`${styles.logoImg} ${styles.logoWhite}`}
+              priority
+            />
+            <Image
+              src="/logo.png"
+              alt="Cemetco Engineering"
+              width={160}
+              height={74}
+              className={`${styles.logoImg} ${styles.logoColored}`}
               priority
             />
           </Link>

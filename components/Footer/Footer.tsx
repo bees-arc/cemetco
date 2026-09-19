@@ -47,10 +47,10 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <Image
-              src="/logo.svg"
+              src="/logo-white.png"
               alt="Cemetco Engineering"
               width={150}
-              height={50}
+              height={70}
               className={styles.footerLogo}
             />
             <p className={styles.brandDesc}>

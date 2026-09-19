@@ -31,19 +31,41 @@
 
 /* Logo */
 .logo {
-  display: flex;
+  display: inline-grid;
   align-items: center;
-  gap: var(--spacing-3);
   text-decoration: none;
   flex-shrink: 0;
+  position: relative;
 }
 
 .logoImg {
-  height: 50px;
+  grid-area: 1 / 1;
+  height: 48px;
   width: auto;
   object-fit: contain;
-  transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-normal);
 }
+
+.logoWhite {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logoColored {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar.transparent .logoWhite {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar.transparent .logoColored {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* Nav Links */
 .navLinks {
@@ -362,6 +384,16 @@
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .logoWhite {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .logoColored {
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 
   .logoImg {
